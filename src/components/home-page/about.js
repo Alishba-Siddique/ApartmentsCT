@@ -37,7 +37,7 @@ function About() {
                         <Image
                             src="/images/about/1.jpg"
                             alt="Service Image"
-                            width={390}
+                            width={590}
                             height={760}
                             quality={70}
                             layout="fixed"

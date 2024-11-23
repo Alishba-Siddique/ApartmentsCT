@@ -8,27 +8,27 @@ import SwiperComps, { Slide } from '../swiper';
 const heroImage = `relative w-full md:h-[980px] h-[725px] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-black before:opacity-30 before:z-[1] before:pointer-events-none overflow-hidden`;
 const heroContent = `absolute sm:w-[calc(100%_-_100px)] left-auto top-1/2 transform translate-y-[-50%] z-[2]`;
 
-function HeroOne({ heroItems, settings }) {
-    settings = {
-        autoplay: {
-            delay: 4000,
-            disableOnInteraction: false,
-        },
-        pagination: { clickable: true, type: 'bullets' },
-        navigation: false,
-        slidesPerView: 1,
-        spaceBetween: 0,
-    };
+function HeroOne({ heroItems }) {
+    // settings = {
+    //     autoplay: {
+    //         delay: 4000,
+    //         disableOnInteraction: false,
+    //     },
+    //     pagination: { clickable: true, type: 'bullets' },
+    //     navigation: false,
+    //     slidesPerView: 1,
+    //     spaceBetween: 0,
+    // };
 
     return (
-        <SwiperComps sliderCName="hero-area" settings={settings}>
+        <SwiperComps className="hero relative w-full h-full">
             {heroItems?.map((heroItem) => {
                 const TwitterIcon = FaIcons[heroItem?.twitterIcon];
                 const FacebookIcon = FaIcons[heroItem?.facebookIcon];
                 const GoogleIcon = FaIcons[heroItem?.googleIcon];
                 return (
-                    <Slide className="hero-item" key={heroItem.id}>
-                        <div className={heroImage}>
+                    <Slide className="hero-item " key={heroItem.id}>
+                        {/* <div className={heroImage}>
                             <Image
                                 src={heroItem?.image}
                                 alt={heroItem?.title}
@@ -37,7 +37,17 @@ function HeroOne({ heroItems, settings }) {
                                 quality={70}
                                 priority
                             />
-                        </div>
+                        </div> */}
+                        <video
+                            className={`${heroImage} object-cover`}
+                            src={heroItem?.video} // Add the video source URL in heroItem
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            preload="auto"
+                            type="video/mp4"
+                        />
                         <div className="container custom-container">
                             <div className={heroContent}>
                                 <div className="hero-inner grid grid-cols-12">
@@ -78,7 +88,7 @@ function HeroOne({ heroItems, settings }) {
                                             </ul>
                                         </div>
                                     </div>
-                                    <div className="md:col-span-10 col-span-12">
+                                    {/* <div className="md:col-span-10 col-span-12">
                                         <div
                                             className="text-[18px] leading-8 tracking-[5px] text-white uppercase md:mb-[30px] mb-[10px] block hero-slidedown delay-300"
                                             dangerouslySetInnerHTML={{
@@ -98,7 +108,7 @@ function HeroOne({ heroItems, settings }) {
                                                 </a>
                                             </Link>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                             <div className="info text-white hover:text-primary transition-all text-[14px] uppercase absolute bottom-[100px] sm:right-[70px] right-auto z-[2]">
@@ -107,7 +117,7 @@ function HeroOne({ heroItems, settings }) {
                                 </Link>
                             </div>
                         </div>
-                        <div className="mouse-btn-wrap absolute bottom-[30px] left-1/2 -translate-x-1/2">
+                        {/* <div className="mouse-btn-wrap absolute bottom-[30px] left-1/2 -translate-x-1/2">
                             <Link href="#about" passHref>
                                 <ul className="mouse-btn-down">
                                     <li className="chevron animate-move" />
@@ -115,7 +125,7 @@ function HeroOne({ heroItems, settings }) {
                                     <li className="chevron animate-move3" />
                                 </ul>
                             </Link>
-                        </div>
+                        </div> */}
                     </Slide>
                 );
             })}
@@ -125,11 +135,11 @@ function HeroOne({ heroItems, settings }) {
 
 HeroOne.propTypes = {
     heroItems: PropTypes.instanceOf(Object).isRequired,
-    settings: PropTypes.shape({
-        slidesPerView: PropTypes.number,
-        spaceBetween: PropTypes.number,
-        breakpoints: PropTypes.shape({}),
-    }),
+    // settings: PropTypes.shape({
+    //     slidesPerView: PropTypes.number,
+    //     spaceBetween: PropTypes.number,
+    //     breakpoints: PropTypes.shape({}),
+    // }),
 };
 
 export default HeroOne;
