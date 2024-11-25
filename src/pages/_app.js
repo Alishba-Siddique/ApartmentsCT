@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Layout from '../components/layout/layout';
 import { ScrollToTop } from '../components/scroll';
 import '../styles/globals.css';
-import '../styles/embla.css';
 
 function MyApp({ Component, pageProps }) {
     return (
