@@ -9,7 +9,8 @@ function ProjectSlider({ projects, settings }) {
     });
     settings = {
         pagination: { clickable: true, type: 'bullets' },
-        spaceBetween: 5,
+        spaceBetween: 6,
+        navigation: true,
         breakpoints: {
             1200: {
                 slidesPerView: 4,
@@ -40,6 +41,7 @@ ProjectSlider.propTypes = {
     projects: PropTypes.instanceOf(Object).isRequired,
     settings: PropTypes.shape({
         slidesPerView: PropTypes.number,
+        navigation: PropTypes.bool,
         spaceBetween: PropTypes.number,
         breakpoints: PropTypes.shape({}),
     }),

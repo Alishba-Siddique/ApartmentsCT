@@ -4,12 +4,16 @@ import { getAllItems, getFeaturedItems } from '../lib/items-util';
 import HeaderOne from '../components/header/header-1';
 import Hero from '../components/home-page/hero';
 import Services from '../components/home-page/services';
+import FounderInfo from '../components/home-page/founderInfo';
 import About from '../components/home-page/about';
+import Banner from '../components/home-page/banner';
+import HowWeScale from '../components/home-page/weScale';
 import PricingTab from '../components/home-page/pricing-tab';
 import Testimonial from '../components/home-page/testimonial';
 import Brand from '../components/home-page/brand';
 import FeaturedPost from '../components/home-page/featured-post';
 import LatestProject from '../components/home-page/latest-project';
+import Difference from '../components/home-page/difference';
 
 function HomePage({
     heroItems,
@@ -32,8 +36,14 @@ function HomePage({
             <HeaderOne />
             <Hero heroItems={heroItems} />
             <Services services={services} />
-            <LatestProject projects={projects} />
+
+            <FounderInfo />
             <About />
+            <LatestProject projects={projects} />
+            <HowWeScale />
+            <Difference />
+            <Banner />
+
             <PricingTab pricingItems={pricingItems} />
             <Testimonial
                 testimonialItems={testimonialItems}
