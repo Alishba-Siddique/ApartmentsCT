@@ -14,6 +14,7 @@ import Brand from '../components/home-page/brand';
 import FeaturedPost from '../components/home-page/featured-post';
 import LatestProject from '../components/home-page/latest-project';
 import Difference from '../components/home-page/difference';
+import Accordion from '../components/home-page/accordion';
 
 function HomePage({
     heroItems,
@@ -21,16 +22,17 @@ function HomePage({
     projects,
     pricingItems,
     testimonialItems,
+    accordionItems,
     brandItems,
     posts,
 }) {
     return (
         <>
             <Head>
-                <title>Rustic - React Business Template</title>
+                <title>ApartmentsCT</title>
                 <meta
                     name="description"
-                    content="Rustic - React Business Template is an excellent solution to the web designing needs for your website related to creative agency, business, portfolio, corporate, etc. "
+                    content="ApartmentsCT is a real estate company that provides a wide range of apartments for rent in Connecticut."
                 />
             </Head>
             <HeaderOne />
@@ -49,6 +51,7 @@ function HomePage({
                 testimonialItems={testimonialItems}
                 testimonialTitle="+1,250 Happy Clients"
             />
+            <Accordion accordionItems={accordionItems} />
             <Brand brandItems={brandItems} />
             <FeaturedPost posts={posts} />
         </>
@@ -62,6 +65,7 @@ export function getStaticProps() {
     const services = getAllItems('services');
     const pricingItems = getAllItems('pricing');
     const testimonialItems = getAllItems('testimonial');
+    const accordionItems = getAllItems('accordion');
     const brandItems = getAllItems('brands');
     const LatestProject = getFeaturedItems(projects);
     const FeaturedPost = getFeaturedItems(posts);
@@ -74,6 +78,7 @@ export function getStaticProps() {
             services,
             pricingItems,
             testimonialItems,
+            accordionItems,
             brandItems,
         },
     };
@@ -85,6 +90,7 @@ HomePage.propTypes = {
     projects: PropTypes.instanceOf(Object).isRequired,
     pricingItems: PropTypes.instanceOf(Object).isRequired,
     testimonialItems: PropTypes.instanceOf(Object).isRequired,
+    accordionItems: PropTypes.instanceOf(Object).isRequired,
     brandItems: PropTypes.instanceOf(Object).isRequired,
     posts: PropTypes.instanceOf(Object).isRequired,
 };

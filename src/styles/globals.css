@@ -368,3 +368,26 @@ textarea:focus-visible {
 .page-parallax img {
     @apply bg-fixed h-[250px];
 }
+
+/*--------------testimonial----------------*/
+/* Pagination container */
+.swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; /* Spacing between lines */
+}
+
+/* Pagination bullets styled as lines */
+.swiper-pagination-bullet {
+    width: 24px; /* Length of the line */
+    height: 2px; /* Thickness of the line */
+    background-color: #999999; /* Inactive line color */
+    border-radius: 0; /* Remove rounded edges */
+    transition: background-color 0.3s ease;
+}
+
+/* Active line styling */
+.swiper-pagination-bullet-active {
+    background-color: black; /* Active line color */
+}

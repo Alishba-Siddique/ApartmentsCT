@@ -9,7 +9,12 @@ function Testimonial({ testimonialItems, testimonialTitle, settings }) {
         ssr: false,
     });
     settings = {
-        pagination: false,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true, // Enables click interaction
+            bulletClass: 'swiper-pagination-bullet', // Default class
+            bulletActiveClass: 'swiper-pagination-bullet-active',
+        },
         spaceBetween: 30,
         slidesPerView: 2,
         navigation: {
@@ -18,6 +23,7 @@ function Testimonial({ testimonialItems, testimonialTitle, settings }) {
         },
         updateOnWindowResize: true,
         loop: true,
+        autoplay: true,
         observer: true,
         observeParents: true,
         breakpoints: {
@@ -52,9 +58,19 @@ function Testimonial({ testimonialItems, testimonialTitle, settings }) {
                             return (
                                 <Slide key={testimonialItem?.id}>
                                     <div className="testimonial-block">
-                                        <div className="inner-box relative before:absolute before:top-0 before:left-0 before:w-full before:h-[5px] before:bg-primary before:transition-all before:duration-500 before:scale-0 before:hover:scale-100">
-                                            <div className="quote flex justify-end text-primary text-[30px] leading-[60px] py-[10px]">
+                                        <div className="inner-box relative before:absolute before:top-0 before:left-0 before:w-full before:h-[5px] before:bg-black before:transition-all before:duration-500 before:scale-0 before:hover:scale-100">
+                                            <div className="quote flex justify-end text-black text-[30px] leading-[60px] py-[10px]">
                                                 <Icon />
+                                            </div>
+                                            {/* Author Image */}
+                                            <div className="author-image">
+                                                <img
+                                                    src={
+                                                        testimonialItem?.authorImage
+                                                    }
+                                                    alt={`${testimonialItem?.authorName}`}
+                                                    className="w-16 h-16 mb-5 rounded-full object-cover object-center border-2 border-gray-700"
+                                                />
                                             </div>
                                             <h2 className="testimonial-author">
                                                 {testimonialItem?.authorName}
@@ -73,6 +89,8 @@ function Testimonial({ testimonialItems, testimonialTitle, settings }) {
                             );
                         })}
                     </SwiperComps>
+                    {/* Pagination */}
+                    <div className="swiper-pagination mt-5 flex justify-center space-x-4" />
                 </div>
             </div>
         </div>
