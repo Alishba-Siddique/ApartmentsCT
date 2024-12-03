@@ -37,23 +37,22 @@ function HomePage({
             </Head>
             <HeaderOne />
             <Hero heroItems={heroItems} />
-            <Services services={services} />
+            {/* <Services services={services} /> */}
 
             <FounderInfo />
             <About />
             <LatestProject projects={projects} />
             <HowWeScale />
             <Difference />
-            <Banner />
-
-            <PricingTab pricingItems={pricingItems} />
+            <Accordion accordionItems={accordionItems} />
+            {/* <PricingTab pricingItems={pricingItems} /> */}
             <Testimonial
                 testimonialItems={testimonialItems}
-                testimonialTitle="+1,250 Happy Clients"
+                testimonialTitle="What Our Clients Say"
             />
-            <Accordion accordionItems={accordionItems} />
-            <Brand brandItems={brandItems} />
-            <FeaturedPost posts={posts} />
+            <Banner />
+            {/* <Brand brandItems={brandItems} />
+            <FeaturedPost posts={posts} /> */}
         </>
     );
 }

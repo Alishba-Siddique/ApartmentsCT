@@ -120,7 +120,7 @@ function Footer() {
                 <div className="custom-container">
                     <div className="inner-container border-[#dfdfdf] border-t md:mt-[95px] mt-[50px] py-9">
                         <div className="md:grid md:grid-cols-12 flex flex-col">
-                            <div className="md:col-span-4 max-lm:order-last max-lm:pt-[10px]">
+                            {/* <div className="md:col-span-4 max-lm:order-last max-lm:pt-[10px]">
                                 <div className="copyright flex-wrap md:justify-start justify-center md:mb-0 mb-[10px]">
                                     © {currentYear}
                                     <span className="mx-1">RUSTIC</span>
@@ -134,8 +134,8 @@ function Footer() {
                                         </a>
                                     </Link>
                                 </div>
-                            </div>
-                            <div className="md:col-span-6">
+                            </div> */}
+                            <div className="md:col-start-3 md:col-end-8">
                                 <ul className="footer-social-link md:mb-0 mb-[10px]">
                                     <li>
                                         <Link href="https://twitter.com/">
@@ -164,7 +164,7 @@ function Footer() {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="md:col-span-2">
+                            <div className="md:col-start-9 md:col-end-11">
                                 <ul className="footer-language flex md:justify-end justify-center">
                                     <li className="mr-8">
                                         <Link href="/about">

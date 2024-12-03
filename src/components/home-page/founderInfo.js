@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 function founderInfo() {
     const subTitle = `text-[18px] leading-[32px] text-black uppercase`; // Changed text color to white
-    const title = `text-[36px] lm:text-[42px] lm:leading-[50px] text-black font-normal mb-[35px] lg:max-w-[560px]`; // Changed text color to white
+    const title = `text-[34px] lm:text-[40px] lm:leading-[50px] text-black font-bold mb-[35px] lg:max-w-[560px]`; // Changed text color to white
     const desc = `text-[17px] leading-[25px] text-black mb-[50px] lg:max-w-[490px]`; // Changed text color to white
     const aboutImage = `flex lg:justify-end md:justify-center relative sm:before:bg-pattern-1 sm:before:absolute sm:before:h-[330px] sm:before:w-[330px] sm:before:top-[45px] sm:before:left-[155px]`;
 

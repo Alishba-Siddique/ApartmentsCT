@@ -5,7 +5,7 @@ function difference() {
         <section className="bg-[#111111] text-white py-12 px-6 lg:px-36 lg:py-44">
             {/* Heading */}
             <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-medium">
+                <h2 className="text-3xl md:text-4xl font-bold">
                     What are Our Differentiation?
                 </h2>
                 <p className="mt-4 text-gray-400">
@@ -19,9 +19,7 @@ function difference() {
                 {/* Expert Advice */}
                 <div className="bg-[#111111] p-6 rounded-lg flex flex-col items-center text-center hover:drop-shadow-xl">
                     <FiHelpCircle className="text-gray-400 text-4xl mb-4" />
-                    <h3 className="text-xl font-semibold mb-2">
-                        Expert Advice
-                    </h3>
+                    <h3 className="text-xl font-bold mb-2">Expert Advice</h3>
                     <p className="text-gray-400">
                         Our specialized advisors provide personalized insights,
                         making your real estate journey seamless.
@@ -31,7 +29,7 @@ function difference() {
                 {/* Exclusive Property */}
                 <div className="bg-[#111111] p-6 rounded-lg flex flex-col items-center text-center hover:drop-shadow-xl">
                     <FiKey className="text-gray-400 text-4xl mb-4" />
-                    <h3 className="text-xl font-semibold mb-2">
+                    <h3 className="text-xl font-bold mb-2">
                         Exclusive Property
                     </h3>
                     <p className="text-gray-400">
@@ -43,9 +41,7 @@ function difference() {
                 {/* Global Network */}
                 <div className="bg-[#111111] p-6 rounded-lg flex flex-col items-center text-center hover:drop-shadow-xl">
                     <FiGlobe className="text-gray-400 text-4xl mb-4" />
-                    <h3 className="text-xl font-semibold mb-2">
-                        Global Network
-                    </h3>
+                    <h3 className="text-xl font-bold mb-2">Global Network</h3>
                     <p className="text-gray-400">
                         Access a vast network of international properties,
                         opening doors to a world of possibilities.

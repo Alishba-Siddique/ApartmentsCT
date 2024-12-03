@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { ArrowUpRight } from 'lucide-react';
 
@@ -14,8 +14,8 @@ function Accordion({ accordionItems }) {
     };
 
     return (
-        <div className="container space-y-4 py-10">
-            <h2 className="text-3xl font-bold mb-6">Services</h2>
+        <div className="container space-y-4 py-36">
+            <h2 className="text-5xl font-bold mb-6">Services</h2>
             {sortedItems.map((item) => (
                 <div
                     key={item.order} // Use a unique identifier
@@ -27,15 +27,15 @@ function Accordion({ accordionItems }) {
                         onClick={() => toggleAccordion(item.order)}
                     >
                         <div className="flex items-center">
-                            <span className="text-gray-400 mr-4">
+                            <span className="text-gray-400 text-2xl mr-6">
                                 {String(item.order).padStart(2, '0')}
                             </span>
-                            <span className="font-medium text-gray-900">
+                            <span className="font-semibold text-xl text-gray-900">
                                 {item.title}
                             </span>
                         </div>
                         <ArrowUpRight
-                            className={`h-10 w-10 text-gray-900 transition-transform duration-200 ${
+                            className={`h-10 w-10 text-lg text-gray-900 transition-transform duration-200 ${
                                 openIndex === item.order ? 'rotate-90' : ''
                             }`}
                         />

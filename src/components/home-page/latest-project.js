@@ -7,7 +7,7 @@ function LatestProject({ projects }) {
         <div className="project-area md:pt-25 pt-[60px]">
             <div className="container">
                 <div className="project-wrap flex justify-between items-center max-sm:flex-col mb-[60px]">
-                    <h2 className="lm:text-[42px] lm:leading-[50px] text-[32px] max-sm:mb-[15px]">
+                    <h2 className="lm:text-[40px] lm:leading-[50px] text-[32px] max-sm:mb-[15px] font-bold">
                         Case studies of success
                     </h2>
                     <Link href="/projects">

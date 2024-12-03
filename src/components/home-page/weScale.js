@@ -5,7 +5,7 @@ import { TfiHome } from 'react-icons/tfi';
 function HowWeScale() {
     const [inView, setInView] = useState(false); // To track when the section is in the viewport
 
-    const title = `text-[36px] lm:text-[42px] lm:leading-[50px] text-black font-normal mb-[35px] lg:max-w-[560px]`;
+    const title = `text-[34px] lm:text-[40px] lm:leading-[50px] text-black font-bold mb-[35px] lg:max-w-[560px]`;
     const desc = `text-[17px] leading-[25px] text-black mb-[50px] lg:max-w-[520px]`;
 
     useEffect(() => {

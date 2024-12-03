@@ -186,18 +186,18 @@ textarea:focus-visible {
 }
 
 .project-area .swiper-pagination .swiper-pagination-bullet-active {
-    @apply bg-primary; /* Active bullet color */
+    @apply bg-slate-100; /* Active bullet color */
 }
 
 /* Navigation Arrows Styling */
 .swiper-button-next,
 .swiper-button-prev {
-    color: #ffe1a0; /* Arrow color */
+    color: #f1f5f9; /* Arrow color */
 }
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
-    color: #ffe1a0; /* Arrow color */
+    color: #f1f5f9; /* Arrow color */
     font-size: 20px; /* Adjust the size of the arrows */
 }
 
@@ -210,22 +210,27 @@ textarea:focus-visible {
 
 /* Project Item Styles */
 .project-item {
-    @apply relative before:absolute before:bg-primary before:w-0 before:h-full before:top-0 before:left-0 before:z-[1] before:pointer-events-none transition before:duration-500 hover:before:w-full;
+    @apply relative before:absolute before:bg-gray-400 before:opacity-100 before:w-0 before:h-full before:top-0 before:left-0 before:z-[-1] before:pointer-events-none transition before:duration-500 hover:before:w-full;
+    @apply transition-all duration-300 ease-in-out;
+}
+
+.project-img:hover {
+    @apply filter blur-[6px]; /* Apply blur effect */
 }
 
 /* Project Content Styles */
 .project-content {
-    @apply absolute left-[40px] bottom-[40px] z-[2];
+    @apply absolute left-[40px] bottom-[40px] z-[3];
 }
 
 /* Category Text Styles */
 .project-category {
-    @apply text-white text-[14px] leading-6 uppercase block mb-[15px] transition duration-500 group-hover:text-black;
+    @apply text-white text-[14px] leading-6 uppercase block mb-[15px] transition duration-500 group-hover:text-white;
 }
 
 /* Project Title Styles */
 .project-title {
-    @apply text-white text-[36px] leading-[43px] transition duration-500 group-hover:text-black;
+    @apply text-white text-[36px] leading-[43px] transition duration-500 group-hover:text-white;
 }
 
 /* -Filter Tab- */
@@ -300,10 +305,10 @@ textarea:focus-visible {
 /*  - testimonial
 /*----------------------------------------*/
 .testimonial-area {
-    @apply md:pt-[155px] pt-[55px] md:mt-[155px] mt-[55px];
+    @apply md:pt-[155px] pt-[55px] md:pb-[155px] pb-[55px];
 }
 .testimonial-title {
-    @apply lm:text-[42px] text-[28px] lm:leading-[50px];
+    @apply lm:text-[42px] text-[28px] lm:leading-[50px] font-bold;
 }
 .testimonial-block {
     @apply bg-white relative;
@@ -328,7 +333,7 @@ textarea:focus-visible {
     @apply xl:text-[30px] text-[20px] leading-[39px];
 }
 .footer-widget-item ul li {
-    @apply text-secondary text-[14px] leading-[24px] uppercase mb-[5px] last:mb-0;
+    @apply text-secondary text-[12px] leading-[20px] uppercase mb-[5px] last:mb-0;
 }
 .footer-list li {
     @apply duration-300 hover:text-black hover:pl-[15px];

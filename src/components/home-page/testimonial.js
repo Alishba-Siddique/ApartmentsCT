@@ -39,7 +39,7 @@ function Testimonial({ testimonialItems, testimonialTitle, settings }) {
         <div className="testimonial-area bg-azure">
             <div className="container">
                 <div className="grid-cols-1">
-                    <div className="flex items-center justify-between mb-[65px]">
+                    <div className="flex items-center justify-between pb-[65px]">
                         <h2 className="testimonial-title">
                             {testimonialTitle}
                         </h2>
